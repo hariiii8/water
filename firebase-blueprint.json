@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "AquaCare user profile with role, contact info, and hierarchical address attributes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 100 },
+        "mobile": { "type": "string", "maxLength": 20 },
+        "role": { "type": "string", "enum": ["citizen", "officer", "admin"] },
+        "state": { "type": "string", "maxLength": 100 },
+        "district": { "type": "string", "maxLength": 100 },
+        "village": { "type": "string", "maxLength": 100 },
+        "gramPanchayat": { "type": "string", "maxLength": 150 },
+        "houseNo": { "type": "string", "maxLength": 50 },
+        "street": { "type": "string", "maxLength": 150 },
+        "landmark": { "type": "string", "maxLength": 150 },
+        "pincode": { "type": "string", "maxLength": 10 },
+        "address": { "type": "string", "maxLength": 500 },
+        "ward": { "type": "string", "maxLength": 100 },
+        "zone": { "type": "string", "maxLength": 100 },
+        "panchayat": { "type": "string", "maxLength": 150 },
+        "avatar": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "mobile", "role", "state", "district", "village", "gramPanchayat", "houseNo", "address"]
+    },
+    "Complaint": {
+      "title": "Complaint",
+      "description": "Water service complaint filed by citizen or detected by IoT sensor grid",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userMobile": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "category": { "type": "string" },
+        "description": { "type": "string", "maxLength": 2000 },
+        "location": { "type": "string", "maxLength": 500 },
+        "state": { "type": "string" },
+        "district": { "type": "string" },
+        "village": { "type": "string" },
+        "gramPanchayat": { "type": "string" },
+        "ward": { "type": "string" },
+        "panchayat": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "status": { "type": "string", "enum": ["Submitted", "Assigned", "In Progress", "Resolved", "Rejected"] },
+        "urgency": { "type": "string", "enum": ["Low", "Medium", "High", "Emergency"] },
+        "photoUrl": { "type": "string" }
+      },
+      "required": ["id", "userId", "userName", "title", "category", "location", "status", "urgency", "submittedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Registered citizen, officer, and administrator profiles"
+    },
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Water complaints submitted by citizens"
+    }
+  }
+}

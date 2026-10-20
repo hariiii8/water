@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Remix Remix Remix  AquaCare - Smart Water Management",
+  "description": "Smart municipal water management, complaint reporting, and tracking platform with role-based access for citizens, officers, and administrators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

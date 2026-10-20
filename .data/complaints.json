@@ -1,0 +1,259 @@
+[
+  {
+    "id": "AQUA-2026-1042",
+    "userId": "user_citizen_1",
+    "userName": "Priya Sharma",
+    "userMobile": "9840123456",
+    "title": "Water pipe is leaking on the road",
+    "category": "Water Leakage",
+    "description": "Clean drinking water is leaking from a broken pipe on the road. Water is wasting quickly. Please fix it soon.",
+    "location": "Near Pillar 42, 4th Main Road, Mandaveli",
+    "panchayat": "Mylapore Town Panchayat",
+    "ward": "Ward 12 - Mylapore",
+    "coordinates": {
+      "lat": 13.0285,
+      "lng": 80.2612
+    },
+    "submittedAt": "19 Oct 2026, 07:15 AM",
+    "status": "In Progress",
+    "urgency": "Emergency",
+    "assignedOfficerId": "user_officer_1",
+    "assignedOfficerName": "Rajesh Kumar",
+    "assignedOfficerContact": "+91 98765 43210",
+    "sensorData": {
+      "sensorNode": "Underground Pipeline Sensor Node #04 (Mandaveli)",
+      "tank": {
+        "ph": 7.20,
+        "turbidityNTU": 0.75,
+        "conductivity": 295
+      },
+      "pipeline": {
+        "flowRateLpm": 560,
+        "pressureBar": 1.35
+      },
+      "tap": {
+        "pressureBar": 0.25
+      },
+      "pressureBar": 1.35,
+      "tapPressureBar": 0.25,
+      "flowRateLpm": 560,
+      "turbidityNTU": 0.75,
+      "ph": 7.20,
+      "conductivity": 295,
+      "tdsPPM": 190,
+      "temperatureC": 27,
+      "mlPrediction": {
+        "isBrokenPipePredicted": true,
+        "brokenPipeProbability": 95,
+        "pipelinePressureDropBar": 1.05,
+        "tapPressureDropBar": 1.05,
+        "leakSeverity": "Major Fracture / Broken Pipe",
+        "diagnosisReason": "Underground pipeline pressure dropped by 1.05 bar (nominal 2.40 -> 1.35 bar) with tap delivery starvation (0.25 bar) and surging flow (560 L/min). High probability of fractured underground pipe."
+      },
+      "simpleDiagnosis": "ML model predicts 95% Broken Pipe Probability based on 1.05 bar pipeline pressure drop & 0.25 bar tap pressure starvation.",
+      "alertMessage": "Sensors report: Underground pipe fracture detected from pressure variation (Pipeline: 1.35 bar, Tap: 0.25 bar).",
+      "severity": "Critical",
+      "recordedAt": "19 Oct 2026, 07:10 AM"
+    },
+    "officerNotes": [
+      "Checked the spot. Closed main valve to stop water waste.",
+      "Workers arrived with new pipe parts. Fixing the leak now."
+    ],
+    "timeline": [
+      {
+        "status": "Submitted",
+        "timestamp": "19 Oct 2026, 07:15 AM",
+        "title": "Problem Sent",
+        "description": "Problem reported by Priya Sharma.",
+        "updatedBy": "Citizen"
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "19 Oct 2026, 08:00 AM",
+        "title": "Officer Assigned",
+        "description": "Assigned to Water Officer Rajesh Kumar.",
+        "updatedBy": "Manager"
+      },
+      {
+        "status": "In Progress",
+        "timestamp": "19 Oct 2026, 09:30 AM",
+        "title": "Fixing on Site",
+        "description": "Workers are fixing the broken pipe on the road.",
+        "updatedBy": "Rajesh Kumar"
+      }
+    ]
+  },
+  {
+    "id": "AQUA-2026-1038",
+    "userId": "user_citizen_1",
+    "userName": "Priya Sharma",
+    "userMobile": "9840123456",
+    "title": "Tap water is brown and dirty",
+    "category": "Dirty Water",
+    "description": "Tap water is muddy and brown today. It smells bad and cannot be used for drinking or cooking.",
+    "location": "14 Kutchery Road, Mylapore",
+    "panchayat": "Mylapore Town Panchayat",
+    "ward": "Ward 12 - Mylapore",
+    "coordinates": {
+      "lat": 13.0335,
+      "lng": 80.2675
+    },
+    "submittedAt": "18 Oct 2026, 08:30 AM",
+    "status": "Assigned",
+    "urgency": "High",
+    "assignedOfficerId": "user_officer_1",
+    "assignedOfficerName": "Rajesh Kumar",
+    "assignedOfficerContact": "+91 98765 43210",
+    "sensorData": {
+      "sensorNode": "Storage Tank & Purity Sensor #12 (Mylapore Reservoir)",
+      "tank": {
+        "ph": 6.45,
+        "turbidityNTU": 4.80,
+        "conductivity": 780
+      },
+      "pipeline": {
+        "flowRateLpm": 395,
+        "pressureBar": 2.15
+      },
+      "tap": {
+        "pressureBar": 1.20
+      },
+      "pressureBar": 2.15,
+      "tapPressureBar": 1.20,
+      "flowRateLpm": 395,
+      "turbidityNTU": 4.8,
+      "ph": 6.45,
+      "conductivity": 780,
+      "tdsPPM": 500,
+      "temperatureC": 26.5,
+      "mlPrediction": {
+        "isBrokenPipePredicted": false,
+        "brokenPipeProbability": 12,
+        "pipelinePressureDropBar": 0.25,
+        "tapPressureDropBar": 0.10,
+        "leakSeverity": "Normal",
+        "diagnosisReason": "Storage Tank contamination detected: High turbidity (4.80 NTU) and conductivity (780 µS/cm). Underground pipeline pressure variation is minimal (0.25 bar)."
+      },
+      "simpleDiagnosis": "Elevated Tank turbidity (4.80 NTU) and conductivity (780 µS/cm). Silt sediment detected in storage reservoir.",
+      "alertMessage": "Sensors report: Storage tank turbidity spike (4.80 NTU) and conductivity deviation (780 µS/cm).",
+      "severity": "Warning",
+      "recordedAt": "18 Oct 2026, 08:25 AM"
+    },
+    "officerNotes": [
+      "Visiting today to collect a water sample for testing."
+    ],
+    "timeline": [
+      {
+        "status": "Submitted",
+        "timestamp": "18 Oct 2026, 08:30 AM",
+        "title": "Problem Sent",
+        "description": "Dirty water reported.",
+        "updatedBy": "Citizen"
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "18 Oct 2026, 11:15 AM",
+        "title": "Officer Assigned",
+        "description": "Given to Officer Rajesh Kumar to test the line.",
+        "updatedBy": "Manager"
+      }
+    ]
+  },
+  {
+    "id": "AQUA-2026-1015",
+    "userId": "user_citizen_1",
+    "userName": "Priya Sharma",
+    "userMobile": "9840123456",
+    "title": "No water in house taps",
+    "category": "No Water",
+    "description": "No water came from taps for 2 days. House storage tanks are completely empty.",
+    "location": "East Mada Street, Mylapore",
+    "panchayat": "Mylapore Town Panchayat",
+    "ward": "Ward 12 - Mylapore",
+    "coordinates": {
+      "lat": 13.034,
+      "lng": 80.271
+    },
+    "submittedAt": "16 Oct 2026, 09:00 AM",
+    "status": "Resolved",
+    "urgency": "Low",
+    "assignedOfficerId": "user_officer_1",
+    "assignedOfficerName": "Rajesh Kumar",
+    "assignedOfficerContact": "+91 98765 43210",
+    "officerRating": {
+      "stars": 5,
+      "feedback": "Officer checked the water motor, fixed wiring quickly, and water is back.",
+      "ratedAt": "17 Oct 2026"
+    },
+    "sensorData": {
+      "sensorNode": "Distribution Network Monitoring Hub (East Mada St)",
+      "tank": {
+        "ph": 7.30,
+        "turbidityNTU": 0.40,
+        "conductivity": 290
+      },
+      "pipeline": {
+        "flowRateLpm": 420,
+        "pressureBar": 2.40
+      },
+      "tap": {
+        "pressureBar": 1.35
+      },
+      "pressureBar": 2.4,
+      "tapPressureBar": 1.35,
+      "flowRateLpm": 420,
+      "turbidityNTU": 0.4,
+      "ph": 7.25,
+      "conductivity": 290,
+      "tdsPPM": 185,
+      "temperatureC": 26.8,
+      "mlPrediction": {
+        "isBrokenPipePredicted": false,
+        "brokenPipeProbability: 2,
+        "pipelinePressureDropBar": 0.0,
+        "tapPressureDropBar": 0.0,
+        "leakSeverity": "Normal",
+        "diagnosisReason": "Nominal operational gradient: Pipeline at 2.40 bar, consumer tap at 1.35 bar, and pristine Tank purity (0.40 NTU)."
+      },
+      "simpleDiagnosis": "Water motor repaired. Optimal parameters across Tank, Pipeline, and Tap.",
+      "alertMessage": "Sensors report optimal parameters (Tank: 0.40 NTU, Pipeline: 2.40 bar, Tap: 1.35 bar).",
+      "severity": "Normal",
+      "recordedAt": "17 Oct 2026, 08:45 AM"
+    },
+    "officerNotes": [
+      "Water motor switch was damaged.",
+      "New switch fitted. Normal water supply restored."
+    ],
+    "timeline": [
+      {
+        "status": "Submitted",
+        "timestamp": "16 Oct 2026, 09:00 AM",
+        "title": "Problem Sent",
+        "description": "No water supply reported.",
+        "updatedBy": "Citizen"
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "16 Oct 2026, 10:00 AM",
+        "title": "Officer Assigned",
+        "description": "Electrician team sent by Rajesh Kumar.",
+        "updatedBy": "Manager"
+      },
+      {
+        "status": "In Progress",
+        "timestamp": "16 Oct 2026, 02:00 PM",
+        "title": "Fixing on Site",
+        "description": "Repairing the water motor pump.",
+        "updatedBy": "Rajesh Kumar"
+      },
+      {
+        "status": "Resolved",
+        "timestamp": "17 Oct 2026, 08:30 AM",
+        "title": "Problem Fixed",
+        "description": "Water is flowing properly now. Problem resolved.",
+        "updatedBy": "Rajesh Kumar"
+      }
+    ],
+    "photoUrl": "/images/crystal_pure_water_1791899804764.jpg"
+  }
+]
